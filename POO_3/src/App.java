@@ -59,10 +59,8 @@ public class App {
         for (int i = 0; i < discos.size(); i++) {
             if (discos.get(i).getArtista().equalsIgnoreCase(artistaUser)) {
                 System.out.println("El artista" + artistaUser + " está! ");
-                encontrado = true;
-                break;      
+                encontrado = true;      
             }
-            
         }
         if (!encontrado) {
             System.out.println("El artista " + artistaUser + " no lo tenemos");
