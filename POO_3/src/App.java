@@ -16,16 +16,37 @@ public class App {
         discos.add(new Discos("Led Zeppelin", "IV", 1971, 42.20, true ));
         discos.add(new Discos("AC/DC", "Back in Black", 1971, 42.20, true ));
         discos.add(new Discos("Black Sabath", "Paranoid", 1970, 25.55, true));
+
+        System.out.println("Ingrese los datos de su disco favorito: ");
+        System.out.println("Artista: ");
+        String artista = teclado.nextLine();
+        System.out.println("Título: ");
+        String titulo = teclado.nextLine();
+        System.out.println("Año: ");
+        int year = teclado.nextInt();
+        teclado.nextLine();
+        System.out.println("Duración: ");
+        double duracion = teclado.nextDouble();
+        
+        /*System.out.println("Está entre tus discos favoritos S/N");
+            String favS_N = teclado.nextLine();
+
+            if(favS_N.equalsIgnoreCase("S")){
+            boolean fav = true;
+        } else {
+            boolean fav = false;
+        }  */
+
+        Discos discoUser = new Discos(artista, titulo, year, duracion, true);
+        discos.add(discoUser);
         
         System.out.println("Los discos que tenemos son:");
-        
-        
 
         for(Discos disco: discos){
             System.out.println(disco.getTitulo() + " de: " +  disco.getArtista());
         }        
         
-        System.out.println("introduce de cual disco quieres ver el año: (1-6)");
+        System.out.println("introduce de cual disco quieres ver el año: 1 al " + discos.size());
         discoYear = teclado.nextInt();
         teclado.nextLine();
 
